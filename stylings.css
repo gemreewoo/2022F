@@ -1,6 +1,6 @@
 
   body{
-    background-image: linear-gradient(rgb(148, 162, 213), rgb(173, 217, 123))
+    background-image: linear-gradient(rgb(148, 162, 213), rgb(124, 158, 119))
  }
 
  #elegantheading {
@@ -24,23 +24,90 @@
   padding-top: 200px;
   border: 50px ;
   margin: 50px ;
+
 }
-h2{
-  position:absolute;
-  right:1px;
-  font-weight: lighter;
-  font-size: 0.1in;
-}
-.hehe {
+
+
+
+
+/* .hehe{ 
 position:fixed;
-right: 110px;
-top:135px;
-}
-/* #patronus {
-bottom:50px;  
+right: 60px;
+top: 50px;
 } */
-img{
-  width:10%;
-  position:sticky;
+
+
+
+/* if iwant 2 imgs to stay in the same place(laying on top of one another), I need the CONTAINER!!!!!!!! */
+.container{
+  position: sticky;
   bottom:0px;
+}
+.container:hover .image{opacity:0}
+/* .image:hover{
+opacity:0;
+} */
+/* also, if i have the container containing the img, i cant make the img respond to the hover instrcution by itself*/
+.image{
+  width: 10%;
+  padding-bottom: 10px;
+  position:absolute;
+  bottom:0px;
+  opacity: 100;
+}
+
+/* .image:hover{
+  background-image: url("kitty 2.png");
+} */
+.transform{
+  width: 10%;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom:0px;
+  opacity:0;
+}
+.transform:hover{
+  opacity:100;
+}
+
+/* .ablackhole{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+} */
+
+.circleBase {
+  border-radius: 46%;
+}
+.ablackhole {
+  position:absolute;
+  top: 200px;
+  right:100px;
+  width: 28px;
+  height: 28px;
+  background: #2a2a2a;
+  border: 0.3px solid #000;
+  transition: 0.3s;
+}
+.ablackhole:hover{
+  background:#4bc475
+}
+
+
+.box {
+  position:absolute;
+  top:100px;
+  left:250px;
+  background-color: rgb(204, 68, 0);
+  width: 400px;
+  height: 10px;
+  perspective: 1000px;
+
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+.box:hover{
+  transform: rotateX(180deg);
 }
